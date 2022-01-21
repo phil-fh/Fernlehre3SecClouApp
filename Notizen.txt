@@ -1,19 +1,29 @@
-Notizen:
-https://fhb-codelabs.github.io/codelabs/ssoa-pt-sops-kms/index.html#7
 
-Schlagworte
+
+
 Verbesserung der Ausfallsicherheit
 =security groups, loadbalancer
+
 Transportverschlüsselung
 =https, wireguard vpn?
+
 Secrets
-=keine secrets in git hochladen
+=keine secrets in git hochladen,
+https://fhb-codelabs.github.io/codelabs/ssoa-pt-sops-kms/index.html#7
+
 Authentifizierung
-=oauth proxy
+=oauth proxy, keycloak,
+
 Supply Chain
 =chainguard, github actions? pipeline code
+
 Observability
 =monitoring, datadog?, wissen was sich in der App abspielt
 
+Extra:
+OS absichern?
+
 Tipps: Thema mit Interesse nehmen und auf den podtatohead implementieren.
 Nur code interesse
+gelernte Wissen vertiefen
+Zeigen dass wir unser 40h investiert haben
