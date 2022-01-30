@@ -10,7 +10,7 @@ Das Ziel dieser Übung ist die unter https://fhb-codelabs.github.io/codelabs/vir
 - Supply Chain
 - Observability
 
-##Version 1.0
+## Version 1.0
 In Version 1.0 wurde wurde die Microservice Applikation 1:1 nachgebaut und ohne Absicherungen in das Repository gepuscht.
 
 
