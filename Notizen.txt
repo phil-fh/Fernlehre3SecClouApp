@@ -13,9 +13,12 @@ https://fhb-codelabs.github.io/codelabs/ssoa-pt-sops-kms/index.html#7
 
 Authentifizierung
 =oauth proxy, keycloak,
+https://fhb-codelabs.github.io/codelabs/ssoa-pt-oauth-lab/#0
 
 Supply Chain
 =chainguard, github actions? pipeline code
+https://fhb-codelabs.github.io/codelabs/ssoa-pt-supply-chain-lab/
+
 
 Observability
 =monitoring, datadog?, wissen was sich in der App abspielt
