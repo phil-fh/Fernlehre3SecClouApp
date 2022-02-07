@@ -14,6 +14,8 @@ https://fhb-codelabs.github.io/codelabs/ssoa-pt-sops-kms/index.html#7
 Authentifizierung
 =oauth proxy, keycloak,
 https://fhb-codelabs.github.io/codelabs/ssoa-pt-oauth-lab/#0
+INSTANCE_HOSTNAME=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=podtatohead-oauth" --query "Reservations[].Instances[].PublicDnsName" --out text
+
 
 Supply Chain
 =chainguard, github actions? pipeline code
