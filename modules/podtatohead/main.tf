@@ -28,7 +28,7 @@ resource "aws_security_group" "ingress-all-ssh" {
   }
 }
 
-resource "aws_security_group" "ingress-all-http" {
+resource "aws_security_group" "ingress-all-http_8080" {
   name = "${var.podtato_name}-allow-all-http"
   ingress {
     cidr_blocks = [
@@ -36,6 +36,25 @@ resource "aws_security_group" "ingress-all-http" {
     ]
     from_port = 8080
     to_port = 8080
+    protocol = "tcp"
+  }
+  // Terraform removes the default rule
+  egress {
+    from_port = 0
+    to_port = 0
+    protocol = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
+resource "aws_security_group" "ingress-all-https_443" {
+  name = "${var.podtato_name}-allow-all-http"
+  ingress {
+    cidr_blocks = [
+      "0.0.0.0/0"
+    ]
+    from_port = 443
+    to_port = 443
     protocol = "tcp"
   }
   // Terraform removes the default rule
@@ -69,6 +88,7 @@ resource "aws_security_group" "elb_http" {
     Name = "Allow HTTP through ELB Security Group"
   }
 }
+
 resource "aws_security_group" "elb_http_8080" {
   name        = "${var.podtato_name}-elb_http_8080"
   description = "Allow HTTP traffic to instances through Elastic Load Balancer"

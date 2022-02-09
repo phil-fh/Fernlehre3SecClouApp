@@ -2,7 +2,7 @@ resource "aws_launch_configuration" "podtatohead-arms" {
   image_id = data.aws_ami.amazon-2.image_id
   instance_type = "t3.micro"
   user_data = base64encode(templatefile("${path.module}/templates/init.tpl", { container_image = "ghcr.io/fhb-codelabs/podtato-small-arms", podtato_version=var.podtato_version, left_version=var.left_arm_version, right_version=var.right_arm_version} ))
-  security_groups = [aws_security_group.ingress-all-ssh.id, aws_security_group.ingress-all-http.id]
+  security_groups = [aws_security_group.ingress-all-ssh.id, aws_security_group.ingress-all-http_8080.id]
   name_prefix = "${var.podtato_name}-podtatohead-arms-"
 
   lifecycle {
