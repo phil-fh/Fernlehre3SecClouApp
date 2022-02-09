@@ -1,6 +1,6 @@
 module "podtatohead-1" {
   source = "./modules/podtatohead"
-  podtato_name = "FIRST"
+  podtato_name = "Kunde1"
   hats_version = "v1"
   left_arm_version = "v1"
   left_leg_version = "v1"
