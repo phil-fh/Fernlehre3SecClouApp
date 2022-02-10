@@ -1,16 +1,20 @@
 #!/bin/bash
 # vars available: ${elb_dns}
 sudo bash
-
 yum update -y
 
+#install docker
 amazon-linux-extras install docker -y
 service docker start
 usermod -a -G docker ec2-user
 
+#install certbot
 amazon-linux-extras install epel -y
 yum-config-manager --enable epel
 yum install certbot -y
+
+#install git CLI
+#yum install git -y
 
 #Get Public IP + DNS
 export PUBLIC_IPV4_ADDRESS="$(curl http://169.254.169.254/latest/meta-data/public-ipv4)"

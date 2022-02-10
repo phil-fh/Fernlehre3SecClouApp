@@ -8,9 +8,9 @@ module "podtatohead-1" {
   right_arm_version = "v1"
   right_leg_version = "v1"
 }
-output "first-url" {
+output "unsafe-elb-url" {
   value = module.podtatohead-1.podtato-elb-url
 }
-output "podtato-proxy-url" {
+output "ssl-secure-url" {
   value = module.podtatohead-1.podtato-proxy-url
 }
