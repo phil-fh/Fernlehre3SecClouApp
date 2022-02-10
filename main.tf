@@ -9,5 +9,8 @@ module "podtatohead-1" {
   right_leg_version = "v1"
 }
 output "first-url" {
-  value = module.podtatohead-1.podtato-url
+  value = module.podtatohead-1.podtato-elb-url
+}
+output "podtato-proxy-url" {
+  value = module.podtatohead-1.podtato-proxy-url
 }

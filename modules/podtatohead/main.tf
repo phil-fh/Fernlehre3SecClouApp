@@ -29,7 +29,7 @@ resource "aws_security_group" "ingress-all-ssh" {
 }
 
 resource "aws_security_group" "ingress-all-http_8080" {
-  name = "${var.podtato_name}-allow-all-http"
+  name = "${var.podtato_name}-allow-all-http_8080"
   ingress {
     cidr_blocks = [
       "0.0.0.0/0"
@@ -48,7 +48,7 @@ resource "aws_security_group" "ingress-all-http_8080" {
 }
 
 resource "aws_security_group" "ingress-all-https_443" {
-  name = "${var.podtato_name}-allow-all-http"
+  name = "${var.podtato_name}-allow-all-http_443"
   ingress {
     cidr_blocks = [
       "0.0.0.0/0"
