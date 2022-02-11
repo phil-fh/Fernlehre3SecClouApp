@@ -16,12 +16,19 @@ yum install certbot -y
 #install git CLI
 #yum install git -y
 
+#install oauth-proxy
+#yum install git -y
+
 #Get Public IP + DNS
 export PUBLIC_IPV4_ADDRESS="$(curl http://169.254.169.254/latest/meta-data/public-ipv4)"
 export PUBLIC_INSTANCE_NAME="$(curl http://169.254.169.254/latest/meta-data/public-hostname)"
 
 mkdir -p /app
 certbot certonly --standalone --preferred-challenges http -d $PUBLIC_IPV4_ADDRESS.nip.io --register-unsafely-without-email --non-interactive --agree-tos >> /app/log_certbot 2>&1
+
+#connect github
+# create new oauth app and register links
+# store new client ID and client secret from github into
 
 cat > /app/nginx.conf<< EOF
 server { # simple reverse-proxy
