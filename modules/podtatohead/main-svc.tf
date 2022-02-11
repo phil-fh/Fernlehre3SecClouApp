@@ -1,7 +1,7 @@
 resource "aws_launch_configuration" "podtatohead-main" {
   image_id = data.aws_ami.amazon-2.image_id
   instance_type = "t3.micro"
-  user_data = base64encode(templatefile("${path.module}/templates/init_main.tpl", { container_image = "ghcr.io/fhb-codelabs/podtato-small-main", hats_host = aws_elb.hats_elb.dns_name, arms_host = aws_elb.arms_elb.dns_name, legs_host = aws_elb.legs_elb.dns_name, podtato_version=var.podtato_version } ))
+  user_data = base64encode(templatefile("${path.module}/templates/init_main.tpl", { name="${var.podtato_name}-main", container_image = "ghcr.io/fhb-codelabs/podtato-small-main", hats_host = aws_elb.hats_elb.dns_name, arms_host = aws_elb.arms_elb.dns_name, legs_host = aws_elb.legs_elb.dns_name, podtato_version=var.podtato_version, dd_api_key=var.datadog_api_key } ))
   security_groups = [aws_security_group.ingress-all-ssh.id, aws_security_group.ingress-all-http_8080.id]
   name_prefix = "${var.podtato_name}-podtatohead-main-"
 

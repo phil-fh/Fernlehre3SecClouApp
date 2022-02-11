@@ -44,3 +44,6 @@ variable "desired_instances" {
   type = number
   default = 1
 }
+variable "datadog_api_key" {
+  type = string
+}
