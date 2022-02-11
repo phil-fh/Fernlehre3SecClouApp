@@ -106,7 +106,7 @@ Eine unkomplizierte und doch sehr sichere Möglichkeit seine Infrastrucure as Co
 <details><summary>Übersicht über alle Projekte im Respository:</summary>
 <p>
 
-![image](https://user-images.githubusercontent.com/90909702/153610286-b9ba8e7b-3c93-471f-a626-ddb03fa72a13.png)
+![image](https://user-images.githubusercontent.com/90909702/153668765-1462ef9b-a8f9-43bc-a7a9-bbda0ecf5df7.png)
 
  </p>
 </details>
@@ -114,7 +114,7 @@ Eine unkomplizierte und doch sehr sichere Möglichkeit seine Infrastrucure as Co
 <details><summary>Im Detail sieht es dann wie folgt aus:</summary>
 <p>
 
-![image](https://user-images.githubusercontent.com/90909702/153609903-1528faa3-7f11-4311-8689-a70fbc57a749.png)
+![image](https://user-images.githubusercontent.com/90909702/153668663-f49511ec-15e2-467f-940d-223ef22d6339.png)
 
  </p>
 </details>
